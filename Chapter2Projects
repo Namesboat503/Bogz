@@ -1,0 +1,123 @@
+using System;
+/*Jacob Corser
+ * Lab Project 2
+ * C.Patterson
+ * C#
+ * 1/17/2020*/
+
+
+namespace CorserLab2
+{
+    class Program
+    {
+        static void main(string[] args)
+        {   //GreenVille Revenue
+            // Start of Main Method
+            //taking values from user and storing in the form of a variable
+            //Change the "" Quotations to different terms.
+
+            Console.WriteLine("Please enter the number of" + "Participants in last" + "year's" + "competition");
+            int lastYearParticipants =
+                Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter the number of" + "participants present in" + "current year's competition");
+            int thisYearParticipants =
+                Convert.ToInt32(Console.ReadLine());
+
+            //displaying data
+            Console.WriteLine("Data Present");
+            Console.WriteLine("Last Year participants {0}", lastYearParticipants);
+            Console.WriteLine("Current Year participants {0}", thisYearParticipants);
+
+            //comparing values
+            if (lastYearParticipants > thisYearParticipants)
+                Console.WriteLine("Last year participation" + "were more with {0} number ++ of participants", lastYearParticipants - thisYearParticipants);
+            else
+                Console.WriteLine("this year participation was" + "more with {0} NotFiniteNumberException of" + "participants",
+                thisYearParticipants - lastYearParticipants);
+
+
+            //Revenue
+            int revenue = thisYearParticipants * 25;
+            Console.WriteLine("Revenue for current Year is ${0}", revenue);
+
+        }
+    }
+    class Program1
+    {
+        static void Main1(string[] args)
+            //Projected Raises, Projected Raises Interactive
+        {
+            //Programming Exercise 3.) a - int c - int d - int
+
+            //Projected Raises Const -
+
+            //Declare Variables/Variable
+            int constant = 4;
+            //Declare Variables for the Individual Salary
+            int salary1 = 125000;
+            int salary2 = 250000;
+            int salary3 = 500000;
+            //Console WriteLine Commands
+            Console.WriteLine("Next Year" + "salary of 1st employee" + "is {0:c0}", ((salary1)));
+            Console.WriteLine("Next year + salary of 1st employee" + "is {0:c0}", (salary2 * constant) / 100 + salary2);
+            Console.WriteLine("Next Year" + "salary of 1st employee" + "is {0:c0}", ((salary3 * constant / 100) + salary3));
+            //Lets format this part better and come back to it
+
+            Console.ReadKey();
+
+        }
+    }
+
+    class Program3
+    {
+        //Make Change
+        //Coin Change or Whatever
+
+        
+
+          // 200 => 20x10
+          // 113 => 20x5 10x1 5x0 3x1
+          // 150 => 20x7 10x1
+          // 160 => 20x8 
+          // 207 => 20x10 10x0 5x1 2x1
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Number Dollars");
+
+            //int dollars = Convert.ToInt32(Console.ReadLine());
+            string input = Console.ReadLine();
+            int dollars = Convert.ToInt32(input);
+
+            //declare int
+            int twenties = 0;
+            int tens = 0;
+            int fives = 0;
+            int ones = 0;
+            //Output for dollas
+
+            twenties = (dollars / 20);
+            dollars = (dollars % 20);
+
+
+            Console.WriteLine("twenties: {0}", twenties);
+            tens = (dollars / 10);
+            dollars = (dollars % 10);
+            Console.WriteLine("tens: {0}", tens);
+            fives = (dollars / 5);
+            dollars = (dollars % 5);
+            Console.WriteLine("fives: {0}", fives);
+            ones = (dollars / 1);
+            dollars = (dollars % 1);
+            Console.WriteLine("ones: {0}", ones);
+            Console.ReadKey();
+        }
+    }
+    class Program4
+    {
+        static void Main4(string[] args)
+        {
+        }
+    }
+
+
+}
